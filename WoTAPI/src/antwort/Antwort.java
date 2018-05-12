@@ -11,9 +11,8 @@ public abstract class Antwort {
 		verarbeite();
 	}
 	private void verarbeite() {
-		Object status = getJSONObject().get("status");
-		if(status instanceof String 
-				&& status.equals(STATUS_OK)) {
+		String status = getJSONObject().getString("status");
+		if(status.equals(STATUS_OK)) {
 			erfolgreich=true;
 		}
 		if(erfolgreich) {
