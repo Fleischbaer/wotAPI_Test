@@ -1,6 +1,6 @@
 package abfragen;
 
-public class AbfrageWoTPlayers extends Abfrage {
+public class AbfragePlayers extends Abfrage {
 
 	@Override
 	protected String getBaselink() {

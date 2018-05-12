@@ -28,55 +28,59 @@ public class TableModelSpieler implements TableModel {
 	}
 
 	@Override
-	public void addTableModelListener(TableModelListener arg0) {
+	public void addTableModelListener(TableModelListener l) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public Class<?> getColumnClass(int arg0) {
-		// TODO Auto-generated method stub
-		return null;
+	public Class<?> getColumnClass(int columnIndex) {
+		return String.class;
 	}
 
 	@Override
 	public int getColumnCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return 2;
 	}
 
 	@Override
-	public String getColumnName(int arg0) {
-		// TODO Auto-generated method stub
+	public String getColumnName(int columnIndex) {
+		switch(columnIndex) {
+		case 0:{
+			return "nickname";
+		}
+		case 1:{
+			return "account_id";
+		}
+		}
 		return null;
 	}
 
 	@Override
 	public int getRowCount() {
-		// TODO Auto-generated method stub
-		return 0;
+		return Math.max(10, getSpieler().size());
+//		return getSpieler().size();
 	}
 
 	@Override
-	public Object getValueAt(int arg0, int arg1) {
+	public Object getValueAt(int rowIndex, int columnIndex) {
 		// TODO Auto-generated method stub
 		return null;
 	}
 
 	@Override
-	public boolean isCellEditable(int arg0, int arg1) {
-		// TODO Auto-generated method stub
+	public boolean isCellEditable(int rowIndex, int columnIndex) {
 		return false;
 	}
 
 	@Override
-	public void removeTableModelListener(TableModelListener arg0) {
+	public void removeTableModelListener(TableModelListener l) {
 		// TODO Auto-generated method stub
 
 	}
 
 	@Override
-	public void setValueAt(Object arg0, int arg1, int arg2) {
+	public void setValueAt(Object aValue, int rowIndex, int columnIndex) {
 		// TODO Auto-generated method stub
 
 	}
